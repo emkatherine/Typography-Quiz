@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TypographyQuiz</string>
+    <string name="period">period</string>
+    <string name="head">head</string>
+    <string name="tittle">tittle</string>
+    <string name="q1">1-What is the name of the dot on top of \'i\' and \'j\'?</string>
+    <string name="q2">2-What is the spacing between lines?</string>
+    <string name="q3">3-True/False: A short piece of text in a succeeding column or page is an orphan.</string>
+    <string name="q4">4-Check off all the sans-serif typefaces.</string>
+    <string name="q5">5-A typeface from a typesetting machine that casts type in metal is a _________.</string>
+    <string name="q6">6-The __________ is the \'line\' which most letters sit and which descenders extend below.</string>
+    <string name="q7">7-What is the styling of two characters bounded together?</string>
+    <string name="q8">8-What is the height of the lowercase letters without ascenders and descenders,
+        that is based on the lowercase \'x\'?</string>
+    <string name="kerning">kerning</string>
+    <string name="leading">leading</string>
+    <string name="lineSpacing">line-spacing</string>
+    <string name="threeTrue">true - a widow is a short piece of text in a succeeding line in the same
+paragraph or column</string>
+    <string name="threeFalse">false - it is a widow</string>
+    <string name="futura">Futura</string>
+    <string name="baskerville">Baskerville</string>
+    <string name="franklinGothic">Franklin Gothic</string>
+    <string name="ubuntu">Ubuntu</string>
+    <string name="garamond">Garamond</string>
+    <string name="letterpress">letterpress</string>
+    <string name="stampType">stamp-type</string>
+    <string name="monotype">monotype</string>
+    <string name="ligature">ligature</string>
+    <string name="signature">signature</string>
+    <string name="jointedText">jointed text</string>
+    <string name="shortHeight">short height</string>
+    <string name="xHeight">x-height</string>
+    <string name="defaultHeight">default height</string>
+</resources>
