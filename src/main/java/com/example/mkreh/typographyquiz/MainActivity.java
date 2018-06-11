@@ -7,13 +7,16 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.view.View;
+import android.widget.EditText;
+import android.text.Editable;
 
 public class MainActivity extends AppCompatActivity {
 
     /**
      * variable for keeping track of correct answers
      */
-    int i;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,94 +30,89 @@ public class MainActivity extends AppCompatActivity {
 
     public void q1rg() {
         RadioButton tittleButton = (RadioButton) findViewById(R.id.tittle);
-        tittleButton.isChecked();
-        boolean checked = ((RadioButton) tittleButton).isChecked();
+        tittleButton.isSelected();
+        boolean selected = ((RadioButton) tittleButton).isSelected();
 
-        if (checked) {
-            i++;
+        if (selected) {
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
     public void q2rg() {
         RadioButton leadingButton = (RadioButton) findViewById(R.id.leading);
-        leadingButton.isChecked();
-        boolean checked = ((RadioButton) leadingButton).isChecked();
+        leadingButton.isSelected();
+        boolean selected = ((RadioButton) leadingButton).isSelected();
 
-        if (checked) {
-            i++;
+        if (selected) {
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
     public void q3rg() {
         RadioButton trueButton = (RadioButton) findViewById(R.id.threeTrue);
-        trueButton.isChecked();
-        boolean checked = ((RadioButton) trueButton).isChecked();
+        trueButton.isSelected();
+        boolean selected = ((RadioButton) trueButton).isSelected();
 
-        if (checked) {
-            i++;
+        if (selected) {
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
     public void q5rg() {
         RadioButton letterpressButton = (RadioButton) findViewById(R.id.letterpress);
-       letterpressButton.isChecked();
-        boolean checked = ((RadioButton) letterpressButton).isChecked();
+        letterpressButton.isSelected();
+        boolean selected = ((RadioButton) letterpressButton).isSelected();
 
-        if (checked) {
-            i++;
+        if (selected) {
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
     public void q7rg() {
         RadioButton ligatureButton = (RadioButton) findViewById(R.id.ligature);
-        ligatureButton.isChecked();
-        boolean checked = ((RadioButton) ligatureButton).isChecked();
+        ligatureButton.isSelected();
+        boolean selected = ((RadioButton) ligatureButton).isSelected();
 
-        if (checked) {
-            i++;
+        if (selected) {
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
     public void q8rg() {
         RadioButton xheightButton = (RadioButton) findViewById(R.id.xHeight);
-        xheightButton.isChecked();
-        boolean checked = ((RadioButton) xheightButton).isChecked();
+        xheightButton.isSelected();
+        boolean selected = ((RadioButton) xheightButton).isSelected();
 
-        if (checked) {
-            i++;
+        if (selected) {
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
     /**
      * Correct answer for number 6, the edit text question
      */
 
-    public void q6et() {
+    public void q6et(TextView textView) {
+        EditText q6etText = (EditText) findViewById(R.id.q6et);
+        q6etText.isSelected();
         String correct = "baseline";
         if (correct == "baseline") {
-            i++;
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
     /**
@@ -131,15 +129,14 @@ public class MainActivity extends AppCompatActivity {
         CheckBox fourUbuntuCB = (CheckBox) findViewById(R.id.ubuntu);
         Boolean checkUbuntu = fourUbuntuCB.isChecked();
 
-        if (fourFuturaCB.isChecked() && fourFranklinGothicCB.isChecked() && fourUbuntuCB.isChecked()){
-            i++;
+        if (fourFuturaCB.isChecked() && fourFranklinGothicCB.isChecked() && fourUbuntuCB.isChecked()) {
+            i = i + 1;
         } else {
             i = i + 0;
         }
-        displayScore(i);
     }
 
-    public void displayScore(int score) {
+    public void getScore(View view) {
         TextView textView = (TextView) findViewById(R.id.score);
         textView.setText("your score: " + i);
     }
